@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import SnackbarExampleSimple from './components/snackbar';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+injectTapEventPlugin();
 
 class App extends Component {
   render() {
@@ -13,6 +17,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <SnackbarExampleSimple />
       </div>
     );
   }
