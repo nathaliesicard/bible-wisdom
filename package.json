@@ -9,10 +9,14 @@
     "react-scripts": "0.7.0"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
+    "immutable": "^3.8.1",
     "material-ui": "^0.16.4",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-tap-event-plugin": "^2.0.1"
+    "react-notification": "^6.5.1",
+    "react-tap-event-plugin": "^2.0.1",
+    "react-toastr": "^2.8.2"
   },
   "scripts": {
     "start": "react-scripts start",

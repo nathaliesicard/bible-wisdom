@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import SnackbarExampleSimple from './components/snackbar';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import Toastr from './components/reactToastr'
+import ReactNotification from './components/react-notification'
 
 injectTapEventPlugin();
 
@@ -14,10 +16,12 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h3>Implementation 1</h3>
         <SnackbarExampleSimple />
+        <h3>Implementation 2</h3>
+        <Toastr/>
+        <h3>Implementation 3</h3>
+        <ReactNotification />
       </div>
     );
   }
