@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {ToastContainer, ToastMessage} from 'react-toastr'
+/* TODO: Install Animate.CSS */
 import '../../node_modules/animate.css/animate.css';
 import '../toastr.min.css';
 
@@ -19,6 +20,7 @@ export default class Toastr extends Component {
   addAlert() {
     this.refs.container.success(`Today is ${new Date()}`, `Hello`, {
       closeButton: true,
+      timeOut: 300000,
     });
   }
 

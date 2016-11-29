@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Notification } from 'react-notification';
+import '../App.css';
+
 
 export default class ReactNotification extends Component {
   constructor(props) {
@@ -7,7 +9,6 @@ export default class ReactNotification extends Component {
 
     this.state = {
       isActive: false,
-      permanentNotification: false
     }
   }
 
@@ -26,26 +27,18 @@ export default class ReactNotification extends Component {
           onClick={this.toggleNotification.bind(this)}
           children={!isActive ? "Show notification" : "Hide notification"}
         />
-        <br />
-        <button
-          onClick={() => this.setState({
-            permanentNotification: true
-          })}
-          children="Show permanent notification"
-        />
+
         <Notification
           isActive={this.state.isActive}
-          message="Notification"
-          action="Dismiss"
-          title="Title!"
+          message="Added to your favorites. This is a super long notification with A LOT of text on it."
+          action="Close"
+          //title="Title!"
+          style={false}
+          //className="notification-bar"
+          activeClassName="active animated bounceIn"
+          dismissAfter={10000000}
           onDismiss={this.toggleNotification.bind(this)}
           onClick={() =>  this.setState({ isActive: false })}
-        />
-        <Notification
-          isActive={this.state.permanentNotification}
-          dismissAfter={false}
-          message="Permanent Notification"
-          title="Title!"
         />
       </div>
     );
