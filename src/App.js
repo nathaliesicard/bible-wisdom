@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import ReactNotification from './components/react-notification'
 
-injectTapEventPlugin();
 
 class App extends Component {
   render() {
